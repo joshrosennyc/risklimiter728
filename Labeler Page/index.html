@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
+    <title>Labeler - RiskLimiter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* CSS Color Palette (Preserved from original design) */
+        :root {
+            --antiflash-white: #F0F2F5;
+            --mint: #00C49A;
+            --cambridge-blue: #8DB3B0;
+            --eerie-black: #1A1A1A;
+            --sapphire: #0052CC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--eerie-black);
+            color: var(--antiflash-white);
+        }
+        .text-muted {
+            color: var(--cambridge-blue);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--mint), var(--sapphire));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background-color: var(--mint);
+            color: var(--eerie-black);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 196, 154, 0.2), 0 4px 6px -2px rgba(0, 196, 154, 0.15);
+        }
+        .feature-card {
+            background-color: #212121; /* Slightly lighter than main bg */
+            border: 1px solid #2a2a2a;
+            transition: border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-card:hover {
+            border-color: var(--mint);
+        }
+        .icon-container {
+            background-color: rgba(0, 196, 154, 0.1);
+            color: var(--mint);
+        }
+        .footer-link:hover {
+            color: var(--mint);
+        }
+        /* Custom styles for the logo image */
+        .logo-image {
+            height: 90px; /* Adjusted height to make it even larger using CSS */
+            width: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures it behaves like a block element for margin auto */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Navigation with Logo -->
+        <nav class="py-6 flex items-center">
+            <a href="#" aria-label="Home">
+                <!-- 
+                    The 'src' uses a relative path. This makes the project portable.
+                    The image should be placed in an 'images' folder next to this index.html file.
+                -->
+                <img src="images/risk+limiter+logo.png" 
+                     alt="RiskLimiter Logo" 
+                     class="logo-image"
+                     onerror="this.onerror=null;this.src='https://placehold.co/270x90/1A1A1A/F0F2F5?text=RiskLimiter+Logo';">
+            </a>
+        </nav>
+
+        <!-- Header/Hero Section -->
+        <header class="text-center py-24 sm:py-32">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+                <span class="gradient-text">Labeler</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted">
+                Simple to print and easy to read. Remove the hassle of handwritten labels using RiskLimiter Labeler.
+            </p>
+            <div class="mt-8">
+                <a href="#schedule-demo" class="cta-button inline-block font-semibold rounded-lg px-8 py-3">
+                    Schedule a Demo
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Informational Section with Image -->
+            <section class="py-16">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Image Column -->
+                    <div class="flex justify-center">
+                        <!-- 
+                            UPDATED: Changed the 'src' from a complex, absolute path to a simple, relative one.
+                            Place the 'Labeler+image.png' file inside the 'images' folder.
+                        -->
+                        <img src="images/Labeler+image.png" 
+                             alt="RiskLimiter Labeler App Interface" 
+                             class="w-64 rounded-2xl ring-2 ring-white/10"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x800/212121/F0F2F5?text=App+Preview';">
+                    </div>
+                    <!-- Text Column -->
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl font-bold tracking-tight">When Written by Hand, a Preparation Label Invites Unwanted Human Error.</h2>
+                        <p class="mt-4 text-lg text-muted">
+                            Mislabeled products, inaccurate expiration dates, and poor handwriting can all lead to the likelihood of food-borne illness, a risk for both the customer and the organization.
+                        </p>
+                         <div class="mt-8">
+                            <a href="#schedule-demo" class="cta-button inline-block font-semibold rounded-lg px-8 py-3">
+                                Schedule a Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Features Section -->
+            <section class="py-16">
+                <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Feature 1: Cloud-Based Product List -->
+                    <div class="feature-card p-8 rounded-xl">
+                        <div class="icon-container w-12 h-12 flex items-center justify-center rounded-lg mb-4 flex-shrink-0">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Cloud-Based Product List</h2>
+                        <p class="mt-2 text-muted">
+                           RiskLimiter Labeler uses a cloud-based product list to ensure the accurate printing of preparation labels. The product name, shelf life, PLU, and product category can be centrally managed from our online Dashboard.
+                        </p>
+                    </div>
+                    <!-- Feature 2: Bulk and Individual Printing -->
+                    <div class="feature-card p-8 rounded-xl">
+                         <div class="icon-container w-12 h-12 flex items-center justify-center rounded-lg mb-4 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-printer"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Bulk and Individual Printing</h2>
+                        <p class="mt-2 text-muted">
+                            Preparing more than one item? Set the count of labels needed directly in the app and watch RiskLimiter Labeler print at speeds upward of 5 labels per second. Save significant labor costs on the time-consuming prep label task by printing multiple labels at a time.
+                        </p>
+                    </div>
+                    <!-- Feature 3: Data Tracking and Expiration Reporting -->
+                     <div class="feature-card p-8 rounded-xl">
+                         <div class="icon-container w-12 h-12 flex items-center justify-center rounded-lg mb-4 flex-shrink-0">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-big"><path d="M3 3v18h18"/><path d="M7 12v4"/><path d="M12 8v8"/><path d="M17 4v12"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Data Tracking and Expiration Reporting</h2>
+                        <p class="mt-2 text-muted">
+                            From a centralized dashboard monitor the print history and expiration date of every product in-house. When a product is set to expire, RiskLimiter Labeler will automatically flag the product for removal.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Final CTA Section -->
+            <section id="schedule-demo" class="py-16 text-center">
+                <div class="max-w-xl mx-auto">
+                    <div class="mt-8">
+                        <a href="#" class="cta-button inline-block font-semibold rounded-lg px-8 py-3">
+                            Schedule a Demo
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-800 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-muted">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Contact Info</h3>
+                    <div class="space-y-2">
+                        <p>Phone: 1.800.336.7558</p>
+                        <p>Email: sales@risklimiter.com</p>
+                    </div>
+                </div>
+                 <!-- Headquarters -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Corporate Headquarters</h3>
+                    <address class="space-y-2 not-italic">
+                        <p>941 Menoher Boulevard, Johnstown, PA 15905</p>
+                        <p>Phone: 814.535.8287</p>
+                    </address>
+                </div>
+                <!-- Get in Touch -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Get in Touch</h3>
+                    <div class="space-y-2">
+                       <a href="#" class="block footer-link transition-colors">Email</a>
+                       <a href="#" class="block footer-link transition-colors">Sign up</a>
+                       <a href="#" class="block footer-link transition-colors">Newsletter</a>
+                    </div>
+                </div>
+                <!-- Social Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="footer-link transition-colors" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="footer-link transition-colors" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 2.8 3.2 3 5.2-9.7 1.2-13.4-3.6-13.4-3.6-2 2.8-2.5 5.1-2.5 5.1s-1.4.3-1.4-1.2c-.3 1.5.3 3.2.3 3.2s-2.1 1.2-3.4 1.2c1.4 3.6 5.2 5.1 5.2 5.1s-3.4 2.8-7.9 2.8c9.1 4.9 19.3 1.2 19.3-10.4 0-.5 0-1-.1-1.5z"></path></svg></a>
+                        <a href="#" class="footer-link transition-colors" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 pt-8 border-t border-neutral-800 text-center text-sm text-muted">
+                <p>&copy; 2024 RiskLimiter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // This script renders the icons.
+        lucide.createIcons();
+    </script>
+</body>
+</html>
