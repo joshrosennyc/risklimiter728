@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiskLimiter Inspector</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* CSS Color Palette from the provided design */
+        :root {
+            --antiflash-white: #F0F2F5;
+            --mint: #00C49A;
+            --cambridge-blue: #8DB3B0;
+            --eerie-black: #1A1A1A;
+            --sapphire: #0052CC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--eerie-black);
+            color: var(--antiflash-white);
+        }
+        .text-muted {
+            color: var(--cambridge-blue);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--mint), var(--sapphire));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background-color: var(--mint);
+            color: var(--eerie-black);
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 0.75rem 2rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 196, 154, 0.2), 0 4px 6px -2px rgba(0, 196, 154, 0.15);
+        }
+        .section-card {
+            background-color: #212121; /* Slightly lighter than main bg */
+            border: 1px solid #2a2a2a;
+            border-radius: 1rem;
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        .icon-container {
+            background-color: rgba(0, 196, 154, 0.1);
+            color: var(--mint);
+        }
+        .list-icon {
+            color: var(--mint);
+            flex-shrink: 0;
+        }
+        .video-player {
+            background-color: #000;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer-link:hover {
+            color: var(--mint);
+        }
+        /* Custom styles for the logo image */
+        .logo-image {
+            height: 90px; /* Adjusted height to make it even larger using CSS */
+            width: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures it behaves like a block element for margin auto */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <nav class="py-6 flex items-center">
+            <a href="#" aria-label="Home">
+                <!-- 
+                    UPDATED: Changed the 'src' from a local absolute path to a relative one.
+                    Place the logo in an 'images' folder next to this HTML file.
+                -->
+                <img src="images/risk+limiter+logo.png" alt="RiskLimiter Logo" class="logo-image" onerror="this.onerror=null;this.src='https://placehold.co/270x90/1A1A1A/F0F2F5?text=RiskLimiter+Logo';">
+            </a>
+        </nav>
+
+        <header class="text-center pt-8 pb-24 sm:pt-12 sm:pb-32">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+                RiskLimiter <span class="gradient-text">Inspector</span>
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-muted">
+                The Platform for All Things Inspected. RiskLimiter Inspector helps you create a safer facility and provides indisputable evidence of reasonable care.
+            </p>
+            <div class="mt-10">
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#premises" class="cta-button">Premises Inspections</a>
+                    <a href="#food-safety" class="cta-button">Food Safety</a>
+                    <a href="#incidents" class="cta-button">Incident Reporting &amp; Safety Audits</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <section id="premises" class="section-card">
+                <div class="grid md:grid-cols-2 md:gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight">Premises Inspections</h2>
+                        <h3 class="mt-2 text-2xl font-semibold gradient-text">Accidents Happen.</h3>
+                        <p class="mt-4 text-muted">
+                            And these incidents can be costly, making it essential for businesses to prevent them by
+                            maintaining safe, well-monitored premises. RiskLimiter Inspector, powered by advanced, 
+                            technology and a user-friendly mobile app, helps verify employee routines, monitor
+                            facility conditions, and strengthen safety procedures to effectively reduce risks and
+                            associated costs.
+                        </p>
+                        <p class="mt-4 text-muted">
+                           Our Premises Inspections application has helped clients reduce customer slip-and-fall
+                           incidents by 30% and cut the overall cost of claims by up to 50%.
+                        </p>
+                        <div class="mt-6">
+                             <a href="#get-in-touch" class="cta-button">Schedule a Demo</a>
+                        </div>
+                    </div>
+                    <div class="mt-8 md:mt-0 space-y-8">
+                        <!-- 
+                            UPDATED: Changed the 'src' from a local absolute path to a relative one.
+                            Place the image in an 'images' folder next to this HTML file.
+                        -->
+                        <img src="images/sweep+log-2.png" alt="RiskLimiter Sweep Log on Mobile" class="rounded-xl shadow-2xl mx-auto" style="max-height: 400px; box-shadow: 0 0 40px -10px rgba(0, 196, 154, 0.2);" onerror="this.onerror=null;this.src='https://placehold.co/300x600/212121/FFFFFF?text=Sweep+Log';">
+                        <div>
+                            <h4 class="text-xl font-bold text-center mb-4">How Does It Work?</h4>
+                            <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl" style="box-shadow: 0 0 40px -10px rgba(0, 196, 154, 0.2);">
+                                 <!-- 
+                                    UPDATED: Changed the 'src' from a remote URL to a relative one.
+                                    Place the 'Inspector.mp4' video in a 'videos' folder next to this HTML file.
+                                -->
+                                 <video class="w-full h-full object-cover" controls>
+                                    <source src="videos/Inspector.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="food-safety" class="section-card">
+                <div class="grid md:grid-cols-2 md:gap-12 items-center">
+                    <div class="space-y-8">
+                        <!-- 
+                            UPDATED: Changed the 'src' from a local absolute path to a relative one.
+                            Place the image in an 'images' folder next to this HTML file.
+                        -->
+                        <img src="images/food+safety+1.png" alt="RiskLimiter Food Safety on Mobile" class="rounded-xl shadow-2xl mx-auto" style="max-height: 400px; box-shadow: 0 0 40px -10px rgba(0, 196, 154, 0.2);" onerror="this.onerror=null;this.src='https://placehold.co/300x600/212121/FFFFFF?text=Food+Safety+App';">
+                        
+                        <div>
+                            <h2 class="text-3xl font-bold tracking-tight">Food Safety</h2>
+                            <p class="mt-4 text-muted">
+                               RiskLimiter Food Safety technology helps you accurately check and record food
+                               temperatures to enhance safety and ensure regulatory compliance. Our app works
+                               seamlessly with various Bluetooth thermometers to track food temperatures and ensure
+                               kitchen safety. It communicates in real time with the RiskLimiter cloud database and
+                               offers the ability to apply analytics—helping you identify trends, ensure compliance, and
+                               proactively address potential risks.
+                            </p>
+                            <div class="mt-6">
+                                <a href="#get-in-touch" class="cta-button">Schedule a Demo</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-8 md:mt-0">
+                        <h4 class="text-xl font-bold mb-4">How It Works</h4>
+                        <ul class="space-y-4 text-muted">
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="list-icon mt-1 mr-4"></i>
+                                <span><strong>Connect:</strong> Open the RiskLimiter app to connect with your Bluetooth thermometer.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-lucide="check-circle" class="list-icon mt-1 mr-4"></i>
+                                <span><strong>Inspect:</strong> Select the inspection and follow prompts to temp items.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-lucide="check-circle" class="list-icon mt-1 mr-4"></i>
+                                <span><strong>Record:</strong> Insert the probe or scan to read and record temperatures automatically.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <i data-lucide="check-circle" class="list-icon mt-1 mr-4"></i>
+                                <span><strong>Act:</strong> If out of range, you are prompted to choose a corrective action.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i data-lucide="check-circle" class="list-icon mt-1 mr-4"></i>
+                                <span><strong>Notify:</strong> Out-of-compliance events trigger real-time email or text alerts.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="incidents" class="section-card">
+                 <div class="grid md:grid-cols-2 md:gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold tracking-tight">Incident Reporting &amp; Safety Audits</h2>
+                        <p class="mt-4 text-muted">
+                            Customer and employee accidents are serious incidents that require immediate and
+                            thorough documentation. Capturing detailed information in real time ensures that claims
+                            can be filed promptly and accurately, helping to reduce the overall cost of each claim by
+                            avoiding delays, disputes, or missing information. This documentation becomes a
+                            critical asset in defending against general liability &amp; workers’ compensation claims.
+                            RiskLimiter’s digital platform enhances workplace safety and simplifies Workers&#39;
+                            Compensation audits by delivering a comprehensive, data-driven approach to risk
+                            management. It streamlines safety inspections, improves compliance tracking, and
+                            supports proactive loss prevention efforts.
+                        </p>
+                         <div class="mt-6">
+                            <a href="#get-in-touch" class="cta-button">Schedule a Demo</a>
+                        </div>
+                    </div>
+                     <div class="mt-8 md:mt-0">
+                        <h4 class="text-xl font-bold text-center mb-4">Incident Reporting Demo</h4>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl" style="box-shadow: 0 0 40px -10px rgba(0, 196, 154, 0.2);">
+                            <!-- 
+                                UPDATED: Changed the 'src' from a remote URL to a relative one.
+                                You will need to add a video named 'incident-reporting-demo.mp4' to a 'videos' folder.
+                            -->
+                             <video class="w-full h-full object-cover" controls>
+                                <source src="videos/incident-reporting-demo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <footer id="get-in-touch" class="border-t border-neutral-800 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold tracking-tight">Get in Touch</h2>
+                 <p class="mt-2 text-muted">Sign up for our newsletter or contact us directly.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-muted">
+                <div class="text-center md:text-left">
+                    <h3 class="font-semibold text-white">Contact Us</h3>
+                    <div class="mt-4 space-y-2">
+                        <p>Phone: 1.800.336.7558</p>
+                        <p>Email: sales@risklimiter.com</p>
+                    </div>
+                </div>
+                 <div class="text-center">
+                    <h3 class="font-semibold text-white">Corporate Headquarters</h3>
+                    <address class="mt-4 space-y-2 not-italic">
+                        <p>941 Menoher Boulevard, Johnstown, PA 15905</p>
+                        <p>Phone: 814.535.8287</p>
+                    </address>
+                </div>
+                <div class="text-center md:text-right">
+                    <h3 class="font-semibold text-white">Newsletter</h3>
+                    <div class="mt-4 flex rounded-md shadow-sm max-w-xs mx-auto md:ml-auto">
+                        <input type="email" placeholder="Email" class="flex-1 block w-full rounded-none rounded-l-md bg-neutral-700 border-neutral-600 px-3 py-2 placeholder-muted focus:ring-mint focus:border-mint">
+                        <button class="inline-flex items-center px-4 py-2 border border-l-0 border-mint bg-mint text-eerie-black font-semibold rounded-r-md hover:bg-opacity-90">
+                           Sign up
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row justify-between items-center text-sm text-muted">
+                <p>&copy; 2025 RiskLimiter. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 sm:mt-0">
+                    <a href="#" class="footer-link transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" class="footer-link transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 2.8 3.2 3 5.2-9.7 1.2-13.4-3.6-13.4-3.6-2 2.8-2.5 5.1-2.5 5.1s-1.4.3-1.4-1.2c-.3 1.5.3 3.2.3 3.2s-2.1 1.2-3.4 1.2c1.4 3.6 5.2 5.1 5.2 5.1s-3.4 2.8-7.9 2.8c9.1 4.9 19.3 1.2 19.3-10.4 0-.5 0-1-.1-1.5z"></path></svg></a>
+                    <a href="#" class="footer-link transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // This script is for activating the icons.
+        lucide.createIcons();
+    </script>
+</body>
+</html>

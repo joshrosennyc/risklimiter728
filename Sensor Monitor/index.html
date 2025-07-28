@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Title -->
+    <title>Sensor Monitor - RiskLimiter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* CSS Color Palette (Preserved from original design) */
+        :root {
+            --antiflash-white: #F0F2F5;
+            --mint: #00C49A;
+            --cambridge-blue: #8DB3B0;
+            --eerie-black: #1A1A1A;
+            --sapphire: #0052CC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--eerie-black);
+            color: var(--antiflash-white);
+        }
+        .text-muted {
+            color: var(--cambridge-blue);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--mint), var(--sapphire));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background-color: var(--mint);
+            color: var(--eerie-black);
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 196, 154, 0.2), 0 4px 6px -2px rgba(0, 196, 154, 0.15);
+        }
+        .feature-card, .how-it-works-card {
+            background-color: #212121; /* Slightly lighter than main bg */
+            border: 1px solid #2a2a2a;
+            transition: border-color 0.3s ease;
+        }
+        .feature-card:hover, .how-it-works-card:hover {
+            border-color: var(--mint);
+        }
+        .icon-container {
+            background-color: rgba(0, 196, 154, 0.1);
+            color: var(--mint);
+        }
+        .list-icon {
+            color: var(--mint);
+            flex-shrink: 0;
+        }
+        .video-player {
+            background-color: #000;
+        }
+        .footer-link:hover {
+            color: var(--mint);
+        }
+        /* Custom styles for the logo image */
+        .logo-image {
+            height: 90px; /* Adjusted height to make it even larger using CSS */
+            width: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures it behaves like a block element for margin auto */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main Container -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Navigation with Logo -->
+        <nav class="py-6 flex items-center">
+            <a href="#" aria-label="Home">
+                <!-- 
+                    UPDATED: Changed the 'src' to a relative path.
+                    Place the logo in an 'images' folder.
+                -->
+                <img src="images/risk+limiter+logo.png" alt="RiskLimiter Logo" class="logo-image" onerror="this.onerror=null;this.src='https://placehold.co/270x90/1A1A1A/F0F2F5?text=RiskLimiter+Logo';">
+            </a>
+        </nav>
+
+        <!-- Header/Hero Section with new content -->
+        <header class="text-center py-24 sm:py-32">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+                <span class="gradient-text">Sensor</span> Monitor
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted">
+                RiskLimiter Sensor Monitor observes controlled temperature devices and sends alerts when temperatures fall outside of a predetermined range.
+            </p>
+            <div class="mt-8">
+                <a href="#schedule-demo" class="cta-button inline-block font-semibold rounded-lg px-8 py-3">
+                    Schedule a Demo
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Features Section with new content -->
+            <section class="py-16">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight">Perfect for Cold Storage Monitoring</h2>
+                    <p class="mt-2 text-muted max-w-2xl mx-auto">Every second counts when a cooler, freezer or other controlled temperature device isn’t working properly.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Feature 1: Live Notifications -->
+                    <div class="feature-card p-8 rounded-xl">
+                        <div class="icon-container w-12 h-12 flex items-center justify-center rounded-lg mb-4">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-siren"><path d="M7 18a4 4 0 0 0 4 4h2a4 4 0 0 0 4-4"/><path d="M4.21 12.83a2 2 0 0 0-2.2-2.24l-1 .27a2 2 0 0 0-1.6 2.37l1.1 4.3A2 2 0 0 0 2 19h14a2 2 0 0 0 1.88-1.47l1.12-4.28a2 2 0 0 0-1.63-2.37l-1.03-.27a2 2 0 0 0-2.2 2.24l.17.65H4.04l.17-.65Z"/><path d="M12 2v2"/><path d="M12 12v-2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="m2 10 2-2"/><path d="m20 12-2-2"/><path d="m4.93 19.07 1.41-1.41"/><path d="m17.66 6.34 1.41-1.41"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Live Notifications</h2>
+                        <p class="mt-2 text-muted">
+                           RiskLimiter Sensor Monitor will notify you immediately, via email or text, when equipment malfunctions and temperatures within the device, or the temperature of your product itself, fall outside of acceptable ranges.
+                        </p>
+                    </div>
+                    <!-- Feature 2: Reliable Technology -->
+                    <div class="feature-card p-8 rounded-xl">
+                         <div class="icon-container w-12 h-12 flex items-center justify-center rounded-lg mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap-off"><path d="M12.41 6.75 13 2l-3.5 7h4l-3.22 7.22"/><path d="M18.57 12.91A8 8 0 0 1 12.01 20L4 12h5l-2.48-5.52"/><line x1="2" x2="22" y1="2" y2="22"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Reliable Technology</h2>
+                        <p class="mt-2 text-muted">
+                            RiskLimiter wireless sensors use a thermistor to accurately measure temperatures, and a cellular gateway with battery backup automatically connects to our online servers. Ethernet gateways may also be used.
+                        </p>
+                    </div>
+                </div>
+                 <div class="mt-12 text-center">
+                    <a href="#schedule-demo" class="cta-button inline-block font-semibold rounded-lg px-8 py-3">
+                        Schedule a Demo
+                    </a>
+                </div>
+            </section>
+            
+            <!-- How It Works & Video Section -->
+            <section class="py-16">
+                 <div class="text-center">
+                    <h2 class="text-3xl font-bold tracking-tight">How Does Sensor Monitor Work?</h2>
+                    <p class="mt-2 text-muted">Read below and watch this short video to learn more.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center mt-12">
+                    <!-- How it Works List -->
+                    <div class="how-it-works-card p-8 rounded-xl">
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="list-icon mt-1 mr-4">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                </div>
+                                <span>RiskLimiter sensors are mounted to the controlled cooler or freezer. Sensor can be placed inside or outside of the cooler or freezer.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="list-icon mt-1 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                </div>
+                                <span>Sensors are programmed to record temperatures at any interval desired.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="list-icon mt-1 mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                </div>
+                                <span>Data is first communicated wirelessly to the RiskLimiter Ethernet gateway, placed up to 1,200 feet away, and then transmitted to the RiskLimiter cloud in real time, without the need for a computer.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="list-icon mt-1 mr-4">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle-2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                                </div>
+                                <span>Out-of-safe-range alerts are sent in real time to designate personnel via email, text, or the RiskLimiter Manager’s Application so corrective action can be taken immediately.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Video Player -->
+                    <div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl bg-black" style="box-shadow: 0 0 40px -10px rgba(0, 196, 154, 0.2);">
+                        <!-- 
+                            UPDATED: Replaced the placeholder with a proper HTML video tag.
+                            The 'src' is a relative path. Place the video in a 'videos' folder.
+                        -->
+                        <video class="w-full h-full" controls>
+                            <source src="videos/Sensor Monitor.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Final CTA Section -->
+            <section id="schedule-demo" class="py-16 text-center">
+                <div class="max-w-xl mx-auto">
+                    <h2 class="text-3xl font-bold tracking-tight">Ready to Protect Your Assets?</h2>
+                    <p class="mt-4 text-lg text-muted">
+                        Let us show you how Sensor Monitor can save you time, money, and stress.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#" class="cta-button inline-block font-semibold rounded-lg px-8 py-3">
+                            Schedule a Demo
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-800 mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-muted">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-white">Contact Us</h3>
+                    <div class="mt-4 space-y-2">
+                        <p>Phone: 1.800.336.7558</p>
+                        <p>Email: sales@risklimiter.com</p>
+                    </div>
+                </div>
+                 <!-- Headquarters -->
+                <div>
+                    <h3 class="font-semibold text-white">Corporate Headquarters</h3>
+                    <address class="mt-4 space-y-2 not-italic">
+                        <p>941 Menoher Boulevard, Johnstown, PA 15905</p>
+                        <p>Phone: 814.535.8287</p>
+                    </address>
+                </div>
+                <!-- Social Links -->
+                <div class="md:text-right">
+                    <h3 class="font-semibold text-white">Follow Us</h3>
+                    <div class="flex md:justify-end space-x-4 mt-4">
+                        <a href="#" class="footer-link transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="footer-link transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 2.8 3.2 3 5.2-9.7 1.2-13.4-3.6-13.4-3.6-2 2.8-2.5 5.1-2.5 5.1s-1.4.3-1.4-1.2c-.3 1.5.3 3.2.3 3.2s-2.1 1.2-3.4 1.2c1.4 3.6 5.2 5.1 5.2 5.1s-3.4 2.8-7.9 2.8c9.1 4.9 19.3 1.2 19.3-10.4 0-.5 0-1-.1-1.5z"></path></svg></a>
+                        <a href="#" class="footer-link transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 pt-8 border-t border-neutral-800 text-center text-sm text-muted">
+                <p>&copy; 2024 RiskLimiter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // This script is for the icons.
+        lucide.createIcons();
+    </script>
+</body>
+</html>

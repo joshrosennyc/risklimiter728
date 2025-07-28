@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated Title -->
+    <title>Contact Us - RiskLimiter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* CSS Color Palette (Preserved from original design) */
+        :root {
+            --antiflash-white: #F0F2F5;
+            --mint: #00C49A;
+            --cambridge-blue: #8DB3B0;
+            --eerie-black: #1A1A1A;
+            --sapphire: #0052CC;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--eerie-black);
+            color: var(--antiflash-white);
+        }
+        .text-muted {
+            color: var(--cambridge-blue);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, var(--mint), var(--sapphire));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .cta-button {
+            background-color: var(--mint);
+            color: var(--eerie-black);
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 196, 154, 0.2), 0 4px 6px -2px rgba(0, 196, 154, 0.15);
+        }
+        .industry-card { /* Kept for consistent styling, though not used directly for form */
+            background-color: #212121; /* Slightly lighter than main bg */
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .industry-card:hover {
+            border-color: var(--mint);
+            transform: translateY(-4px);
+        }
+        .icon-container {
+            background-color: rgba(0, 196, 154, 0.1);
+            color: var(--mint);
+        }
+        .footer-link:hover {
+            color: var(--mint);
+        }
+
+        /* Custom styles for the logo image */
+        .logo-image {
+            height: 90px; /* Adjusted height to make it even larger using CSS */
+            width: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures it behaves like a block element for margin auto */
+        }
+
+        /* Form specific styles */
+        .form-input, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #4a4a4a;
+            background-color: #2a2a2a;
+            color: var(--antiflash-white);
+            appearance: none; /* Remove default browser styles */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        .form-input:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--mint);
+            box-shadow: 0 0 0 2px rgba(0, 196, 154, 0.3);
+        }
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 0.5rem;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-radius: 0.25rem;
+            border: 1px solid #4a4a4a;
+            background-color: #2a2a2a;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            position: relative;
+        }
+        .checkbox-container input[type="checkbox"]:checked {
+            background-color: var(--mint);
+            border-color: var(--mint);
+        }
+        .checkbox-container input[type="checkbox"]:checked::after {
+            content: '✔';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--eerie-black);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Main Container - Now wraps all primary content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Navigation with Logo -->
+        <nav class="py-8 pl-8 flex items-center"> <!-- Adjusted padding here -->
+            <a href="#" aria-label="Home">
+                <img src="/Users/joshrosen/Desktop/RiskLimiter Logo in Corner Test/main project/Get in Touch/risk+limiter+logo.png" alt="RiskLimiter Logo" class="logo-image">
+            </a>
+        </nav>
+
+        <!-- Header/Hero Section -->
+        <header class="text-center py-24 sm:py-32">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight">
+                Let’s <span class="gradient-text">Work Together</span>
+            </h1>
+            <p class="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-muted">
+                Interested in working together? Fill out some info and we will be in touch shortly! We can't wait to hear from you!
+            </p>
+            <div class="mt-8">
+                <a href="#contact-form" class="cta-button text-lg">
+                    Get in Touch
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Contact Form Section -->
+            <section id="contact-form" class="py-16">
+                <div class="max-w-2xl mx-auto p-8 rounded-xl industry-card">
+                    <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+                    <form class="space-y-6">
+                        <!-- Name Fields -->
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-white mb-2">Name <span class="text-red-500">(required)</span></label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <input type="text" id="first-name" name="first-name" placeholder="First Name" class="form-input" required>
+                                </div>
+                                <div>
+                                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" class="form-input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Company Name -->
+                        <div>
+                            <label for="company-name" class="block text-sm font-medium text-white mb-2">Company Name</label>
+                            <input type="text" id="company-name" name="company-name" placeholder="Your Company" class="form-input">
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-white mb-2">Email <span class="text-red-500">(required)</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input" required>
+                        </div>
+
+                        <!-- Newsletter Signup -->
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="news-updates" name="news-updates">
+                            <label for="news-updates" class="text-sm text-muted">Sign up for news and updates</label>
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-white mb-2">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" class="form-input">
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-white mb-2">How can we help you? <span class="text-red-500">(required)</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your needs..." class="form-textarea" required></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="text-center">
+                            <button type="submit" class="cta-button text-lg w-full sm:w-auto">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-800 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-muted">
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-white">Contact Us</h3>
+                    <div class="mt-4 space-y-2">
+                        <p>Phone: 1.800.336.7558</p>
+                        <p>Email: sales@risklimiter.com</p>
+                    </div>
+                </div>
+                 <!-- Headquarters -->
+                <div>
+                    <h3 class="font-semibold text-white">Corporate Headquarters</h3>
+                    <address class="mt-4 space-y-2 not-italic">
+                        <p>941 Menoher Boulevard, Johnstown, PA 15905</p>
+                        <p>Phone: 814.535.8287</p>
+                    </address>
+                </div>
+                <!-- Social Links -->
+                <div class="md:text-right">
+                    <h3 class="font-semibold text-white">Follow Us</h3>
+                    <div class="flex md:justify-end space-x-4 mt-4">
+                        <a href="#" class="footer-link transition-colors" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" class="footer-link transition-colors" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 2.8 3.2 3 5.2-9.7 1.2-13.4-3.6-13.4-3.6-2 2.8-2.5 5.1-2.5 5.1s-1.4.3-1.4-1.2c-.3 1.5.3 3.2.3 3.2s-2.1 1.2-3.4 1.2c1.4 3.6 5.2 5.1 5.2 5.1s-3.4 2.8-7.9 2.8c9.1 4.9 19.3 1.2 19.3-10.4 0-.5 0-1-.1-1.5z"></path></svg></a>
+                        <a href="#" class="footer-link transition-colors" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 pt-8 border-t border-neutral-800 text-center text-sm text-muted">
+                <p>&copy; 2024 RiskLimiter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // This script is for the icons.
+        lucide.createIcons();
+    </script>
+</body>
+</html>
